@@ -1,0 +1,18 @@
+Pour compiler:
+make all
+Pour executer ./rsa
+
+Pour compiler les tests:
+make testU
+Pour executer:
+./test
+
+
+Lors de la vérification, il peut se produire une "segmentation fault". Vous avez à votre
+disposition 3 possibilité.
+- Soit relancer la manipulation avec les mêmes clefs.
+- Soit utiliser les clefs 21305883 et 06021993 qui fonctionnent entre elles.
+- Soit mettre en commentaire les lignes suivantes :
+			- Dans cryptage_signature.c ligne 174. Mettre en commentaire la fonction 	: signer(m_signe,m_chiffre);
+				Et décommenter à la ligne 175 la fonction : 	chiffrement(m_signe,m_Claire_Decouper);		
+			- Dans decryptage_verification.c ligne 192. Mettre en commentaire la fonction :	verification(m_Chiffree);
